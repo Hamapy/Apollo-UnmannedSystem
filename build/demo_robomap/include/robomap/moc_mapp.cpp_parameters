@@ -1,0 +1,14 @@
+-I/opt/ros/kinetic/include
+-I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp
+-I/usr/include/eigen3
+-I/usr/include/OGRE/Overlay
+-I/usr/include/OGRE
+-I/usr/include
+-I/home/zjx/Unmanned/src/demo_robomap
+-I/home/zjx/Unmanned/build/demo_robomap
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_PACKAGE_NAME="demo_robomap"
+-DROSCONSOLE_BACKEND_LOG4CXX
+-o
+/home/zjx/Unmanned/build/demo_robomap/include/robomap/moc_mapp.cpp
+/home/zjx/Unmanned/src/demo_robomap/include/robomap/mapp.h

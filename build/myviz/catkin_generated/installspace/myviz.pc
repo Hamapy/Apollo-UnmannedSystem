@@ -1,0 +1,8 @@
+prefix=/home/zjx/Unmanned/install
+
+Name: myviz
+Description: Description of myviz
+Version: 0.1.0
+Cflags: 
+Libs: -L/home/zjx/Unmanned/install/lib 
+Requires: 

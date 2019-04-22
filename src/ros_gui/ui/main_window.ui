@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowDesign</class>
+ <widget class="QMainWindow" name="MainWindowDesign">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1370</width>
+    <height>764</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QRosApp</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources/images.qrc">
+    <normaloff>:/images/icon.png</normaloff>:/images/icon.png</iconset>
+  </property>
+  <property name="locale">
+   <locale language="English" country="Australia"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout">
+    <item>
+     <widget class="QWidget" name="widget" native="true">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,10,1">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0,0">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetDefaultConstraint</enum>
+           </property>
+           <property name="leftMargin">
+            <number>600</number>
+           </property>
+           <property name="rightMargin">
+            <number>600</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="label_mode">
+             <property name="text">
+              <string>当前模式</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox_mode">
+             <item>
+              <property name="text">
+               <string>导航模式</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>寻迹模式</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>建图模式</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="1,5">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_19">
+             <item>
+              <widget class="QWidget" name="widget_map_1" native="true"/>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_map_2" native="true"/>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_map_3" native="true"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_render_1"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QStackedWidget" name="stackedWidget">
+           <property name="currentIndex">
+            <number>2</number>
+           </property>
+           <widget class="QWidget" name="page">
+            <layout class="QGridLayout" name="gridLayout_8">
+             <item row="0" column="0">
+              <widget class="QTabWidget" name="tabWidget">
+               <property name="tabPosition">
+                <enum>QTabWidget::West</enum>
+               </property>
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <property name="elideMode">
+                <enum>Qt::ElideNone</enum>
+               </property>
+               <widget class="QWidget" name="tab_1">
+                <attribute name="title">
+                 <string>观测界面</string>
+                </attribute>
+                <layout class="QGridLayout" name="gridLayout_17">
+                 <item row="0" column="0">
+                  <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="1,3,3">
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_22">
+                     <item>
+                      <widget class="QPushButton" name="pushButton_loadMap">
+                       <property name="text">
+                        <string>加载地图</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_confirmStart">
+                       <property name="text">
+                        <string>确定起始</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_11">
+                       <item>
+                        <widget class="QPushButton" name="pushButton_confirm">
+                         <property name="text">
+                          <string>确定</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="pushButton_cancel">
+                         <property name="text">
+                          <string>取消</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_start">
+                       <property name="text">
+                        <string>开启</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_pause">
+                       <property name="text">
+                        <string>暂停</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_end">
+                       <property name="text">
+                        <string>结束</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="groupBox_moduleState">
+                     <property name="title">
+                      <string>模块 - 传感器状态</string>
+                     </property>
+                     <widget class="QLabel" name="label">
+                      <property name="geometry">
+                       <rect>
+                        <x>20</x>
+                        <y>40</y>
+                        <width>67</width>
+                        <height>17</height>
+                       </rect>
+                      </property>
+                      <property name="text">
+                       <string>模块1</string>
+                      </property>
+                     </widget>
+                     <widget class="QLabel" name="label_2">
+                      <property name="geometry">
+                       <rect>
+                        <x>20</x>
+                        <y>70</y>
+                        <width>67</width>
+                        <height>17</height>
+                       </rect>
+                      </property>
+                      <property name="text">
+                       <string>模块2</string>
+                      </property>
+                     </widget>
+                     <widget class="QLabel" name="label_3">
+                      <property name="geometry">
+                       <rect>
+                        <x>20</x>
+                        <y>100</y>
+                        <width>67</width>
+                        <height>17</height>
+                       </rect>
+                      </property>
+                      <property name="text">
+                       <string>模块3</string>
+                      </property>
+                     </widget>
+                     <widget class="QLabel" name="label_5">
+                      <property name="geometry">
+                       <rect>
+                        <x>20</x>
+                        <y>130</y>
+                        <width>67</width>
+                        <height>17</height>
+                       </rect>
+                      </property>
+                      <property name="text">
+                       <string>模块4</string>
+                      </property>
+                     </widget>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="groupBox_moduleData">
+                     <property name="title">
+                      <string>模块信息</string>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_16">
+                      <item row="0" column="0">
+                       <layout class="QVBoxLayout" name="verticalLayout_23">
+                        <item>
+                         <widget class="QListView" name="listView_console"/>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_2">
+                <attribute name="title">
+                 <string>控制界面</string>
+                </attribute>
+                <layout class="QGridLayout" name="gridLayout_9">
+                 <item row="0" column="0">
+                  <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,1">
+                   <property name="rightMargin">
+                    <number>800</number>
+                   </property>
+                   <item>
+                    <widget class="QGroupBox" name="groupBox">
+                     <property name="title">
+                      <string>模块控制</string>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_6">
+                      <item row="0" column="0">
+                       <layout class="QVBoxLayout" name="verticalLayout_6">
+                        <item>
+                         <widget class="QPushButton" name="pushButton_startAll">
+                          <property name="text">
+                           <string>全部开始</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="pushButton_startPercep">
+                          <property name="text">
+                           <string>感知模块</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="pushButton_startLocal">
+                          <property name="text">
+                           <string>定位模块</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="pushButton_startSensor">
+                          <property name="text">
+                           <string>传感器模块</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="groupBox_layer">
+                     <property name="title">
+                      <string>图层</string>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_7">
+                      <item row="0" column="0">
+                       <layout class="QVBoxLayout" name="verticalLayout_7">
+                        <item>
+                         <widget class="QCheckBox" name="checkBox_reference">
+                          <property name="text">
+                           <string>参考线</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QCheckBox" name="checkBox_obstacles">
+                          <property name="text">
+                           <string>障碍物</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QCheckBox" name="checkBox_image">
+                          <property name="text">
+                           <string>图像</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QCheckBox" name="checkBox_pointcloud">
+                          <property name="text">
+                           <string>点云</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="page_2">
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="0" column="0">
+              <layout class="QGridLayout" name="gridLayout">
+               <item row="0" column="1">
+                <widget class="QTabWidget" name="tabWidget_2">
+                 <property name="tabPosition">
+                  <enum>QTabWidget::West</enum>
+                 </property>
+                 <property name="currentIndex">
+                  <number>1</number>
+                 </property>
+                 <property name="elideMode">
+                  <enum>Qt::ElideNone</enum>
+                 </property>
+                 <widget class="QWidget" name="tab_4">
+                  <attribute name="title">
+                   <string>控制界面</string>
+                  </attribute>
+                  <layout class="QGridLayout" name="gridLayout_20">
+                   <item row="0" column="0">
+                    <layout class="QHBoxLayout" name="horizontalLayout_14" stretch="1,1">
+                     <property name="rightMargin">
+                      <number>800</number>
+                     </property>
+                     <item>
+                      <widget class="QGroupBox" name="groupBox_2">
+                       <property name="title">
+                        <string>模块控制</string>
+                       </property>
+                       <layout class="QGridLayout" name="gridLayout_18">
+                        <item row="0" column="0">
+                         <layout class="QVBoxLayout" name="verticalLayout_27">
+                          <item>
+                           <widget class="QPushButton" name="pushButton_startAll_2">
+                            <property name="text">
+                             <string>全部开始</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="pushButton_startPercep_2">
+                            <property name="text">
+                             <string>感知模块</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="pushButton_startLocal_2">
+                            <property name="text">
+                             <string>定位模块</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="pushButton_startSensor_2">
+                            <property name="text">
+                             <string>传感器模块</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QGroupBox" name="groupBox_layer_2">
+                       <property name="title">
+                        <string>图层</string>
+                       </property>
+                       <layout class="QGridLayout" name="gridLayout_19">
+                        <item row="0" column="0">
+                         <layout class="QVBoxLayout" name="verticalLayout_28">
+                          <item>
+                           <widget class="QCheckBox" name="checkBox_reference_2">
+                            <property name="text">
+                             <string>参考线</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QCheckBox" name="checkBox_obstacles_2">
+                            <property name="text">
+                             <string>障碍物</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QCheckBox" name="checkBox_image_2">
+                            <property name="text">
+                             <string>图像</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QCheckBox" name="checkBox_pointcloud_2">
+                            <property name="text">
+                             <string>点云</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                 <widget class="QWidget" name="tab_3">
+                  <attribute name="title">
+                   <string>观测界面</string>
+                  </attribute>
+                  <layout class="QGridLayout" name="gridLayout_4">
+                   <item row="0" column="0">
+                    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,3,3">
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout">
+                       <item>
+                        <widget class="QPushButton" name="pushButton_loadMap_2">
+                         <property name="text">
+                          <string>加载地图</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="pushButton_confirmStart_2">
+                         <property name="text">
+                          <string>确定起始</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout">
+                         <item>
+                          <widget class="QPushButton" name="pushButton_confirm_2">
+                           <property name="text">
+                            <string>确定</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="pushButton_cancel_2">
+                           <property name="text">
+                            <string>取消</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="pushButton_start_2">
+                         <property name="text">
+                          <string>开启</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="pushButton_pause_2">
+                         <property name="text">
+                          <string>暂停</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="pushButton_end_2">
+                         <property name="text">
+                          <string>结束</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <widget class="QGroupBox" name="groupBox_moduleState_2">
+                       <property name="title">
+                        <string>模块 - 传感器状态</string>
+                       </property>
+                       <widget class="QLabel" name="label_4">
+                        <property name="geometry">
+                         <rect>
+                          <x>20</x>
+                          <y>40</y>
+                          <width>67</width>
+                          <height>17</height>
+                         </rect>
+                        </property>
+                        <property name="text">
+                         <string>模块1</string>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="label_6">
+                        <property name="geometry">
+                         <rect>
+                          <x>20</x>
+                          <y>70</y>
+                          <width>67</width>
+                          <height>17</height>
+                         </rect>
+                        </property>
+                        <property name="text">
+                         <string>模块2</string>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="label_7">
+                        <property name="geometry">
+                         <rect>
+                          <x>20</x>
+                          <y>100</y>
+                          <width>67</width>
+                          <height>17</height>
+                         </rect>
+                        </property>
+                        <property name="text">
+                         <string>模块3</string>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="label_8">
+                        <property name="geometry">
+                         <rect>
+                          <x>20</x>
+                          <y>130</y>
+                          <width>67</width>
+                          <height>17</height>
+                         </rect>
+                        </property>
+                        <property name="text">
+                         <string>模块4</string>
+                        </property>
+                       </widget>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QGroupBox" name="groupBox_moduleData_2">
+                       <property name="title">
+                        <string>模块信息</string>
+                       </property>
+                       <layout class="QGridLayout" name="gridLayout_5">
+                        <item row="0" column="0">
+                         <layout class="QVBoxLayout" name="verticalLayout_5">
+                          <item>
+                           <widget class="QListView" name="listView_console_2"/>
+                          </item>
+                         </layout>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="page_3">
+            <layout class="QGridLayout" name="gridLayout_10">
+             <item row="0" column="0">
+              <widget class="QTabWidget" name="tabWidget_3">
+               <property name="tabPosition">
+                <enum>QTabWidget::West</enum>
+               </property>
+               <property name="tabShape">
+                <enum>QTabWidget::Rounded</enum>
+               </property>
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <property name="elideMode">
+                <enum>Qt::ElideNone</enum>
+               </property>
+               <widget class="QWidget" name="tab_5">
+                <attribute name="title">
+                 <string>观测界面</string>
+                </attribute>
+                <layout class="QGridLayout" name="gridLayout_15">
+                 <item row="1" column="0">
+                  <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="1,3,3">
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_17">
+                     <item>
+                      <widget class="QPushButton" name="pushButton_startMapping">
+                       <property name="text">
+                        <string>开始建图</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_endMapping">
+                       <property name="text">
+                        <string>结束建图</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_recording">
+                       <property name="text">
+                        <string>录制数据</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="groupBox_moduleState_3">
+                     <property name="title">
+                      <string>模块 - 传感器状态</string>
+                     </property>
+                     <widget class="QLabel" name="label_9">
+                      <property name="geometry">
+                       <rect>
+                        <x>20</x>
+                        <y>40</y>
+                        <width>67</width>
+                        <height>17</height>
+                       </rect>
+                      </property>
+                      <property name="text">
+                       <string>模块1</string>
+                      </property>
+                     </widget>
+                     <widget class="QLabel" name="label_10">
+                      <property name="geometry">
+                       <rect>
+                        <x>20</x>
+                        <y>70</y>
+                        <width>67</width>
+                        <height>17</height>
+                       </rect>
+                      </property>
+                      <property name="text">
+                       <string>模块2</string>
+                      </property>
+                     </widget>
+                     <widget class="QLabel" name="label_11">
+                      <property name="geometry">
+                       <rect>
+                        <x>20</x>
+                        <y>100</y>
+                        <width>67</width>
+                        <height>17</height>
+                       </rect>
+                      </property>
+                      <property name="text">
+                       <string>模块3</string>
+                      </property>
+                     </widget>
+                     <widget class="QLabel" name="label_12">
+                      <property name="geometry">
+                       <rect>
+                        <x>20</x>
+                        <y>130</y>
+                        <width>67</width>
+                        <height>17</height>
+                       </rect>
+                      </property>
+                      <property name="text">
+                       <string>模块4</string>
+                      </property>
+                     </widget>
+                     <widget class="QLabel" name="label_led">
+                      <property name="geometry">
+                       <rect>
+                        <x>70</x>
+                        <y>40</y>
+                        <width>81</width>
+                        <height>17</height>
+                       </rect>
+                      </property>
+                      <property name="text">
+                       <string>指示灯图片</string>
+                      </property>
+                     </widget>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="groupBox_moduleData_3">
+                     <property name="title">
+                      <string>模块信息</string>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_14">
+                      <item row="0" column="0">
+                       <layout class="QVBoxLayout" name="verticalLayout_18">
+                        <item>
+                         <widget class="QListView" name="listView_console_3"/>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_6">
+                <attribute name="title">
+                 <string>控制界面</string>
+                </attribute>
+                <layout class="QGridLayout" name="gridLayout_13">
+                 <item row="0" column="0">
+                  <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="1,1">
+                   <property name="rightMargin">
+                    <number>800</number>
+                   </property>
+                   <item>
+                    <widget class="QGroupBox" name="groupBox_3">
+                     <property name="title">
+                      <string>模块控制</string>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_11">
+                      <item row="0" column="0">
+                       <layout class="QVBoxLayout" name="verticalLayout_12">
+                        <item>
+                         <widget class="QPushButton" name="pushButton_startAll_3">
+                          <property name="text">
+                           <string>全部开始</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="pushButton_startPercep_3">
+                          <property name="text">
+                           <string>感知模块</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="pushButton_startLocal_3">
+                          <property name="text">
+                           <string>定位模块</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="pushButton_startSensor_3">
+                          <property name="text">
+                           <string>传感器模块</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="groupBox_layer_3">
+                     <property name="title">
+                      <string>图层</string>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_12">
+                      <item row="0" column="0">
+                       <layout class="QVBoxLayout" name="verticalLayout_13">
+                        <item>
+                         <widget class="QCheckBox" name="checkBox_reference_3">
+                          <property name="text">
+                           <string>参考线</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QCheckBox" name="checkBox_obstacles_3">
+                          <property name="text">
+                           <string>障碍物</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QCheckBox" name="checkBox_image_3">
+                          <property name="text">
+                           <string>图像</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QCheckBox" name="checkBox_pointcloud_3">
+                          <property name="text">
+                           <string>点云</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_Quit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="action_Preferences">
+   <property name="text">
+    <string>&amp;Preferences</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+  </action>
+  <action name="actionAbout_Qt">
+   <property name="text">
+    <string>About &amp;Qt</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../resources/images.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>action_Quit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindowDesign</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,8 @@
+prefix=/home/zjx/Unmanned/devel
+
+Name: librviz_tutorial
+Description: Description of librviz_tutorial
+Version: 0.10.3
+Cflags: 
+Libs: -L/home/zjx/Unmanned/devel/lib 
+Requires: 
